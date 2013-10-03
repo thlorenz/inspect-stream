@@ -37,6 +37,14 @@ function defaultLog (depth) {
 
 var Transform = stream.Transform;
 
+/**
+ * Creates a transform stream that will log the data coming through and push it downstream.
+ * 
+ * @name exports
+ * @function
+ * @param depthOrLog {Number|Function} allows to override the log inspect depth or replace the log function entirely.
+ * @return {TransformStream} that behaves like the upstream.
+ */
 module.exports = function (depthOrLog) { 
   var inspect = new InspectTransform(depthOrLog);
   inspect.on('pipe', function (readable) {
