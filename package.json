@@ -1,6 +1,6 @@
 {
   "name": "inspect-stream",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Inspects a nodejs stream 2+  and logs the data that's coming through.",
   "main": "inspect-stream.js",
   "browser": {
